@@ -26,7 +26,7 @@ def veritabani_isleri():
 
         # Veriyi Ekle
         zaman = datetime.datetime.now()
-        mesaj = "GITHUB-V2: Kod Buluttan Geldi!"
+        mesaj = "OTOMASYON: Ellerimi klavyeden cektim, Jenkins otopilotta calisiyor!"
         imlec.execute("INSERT INTO is_listesi (zaman, is_adi) VALUES (%s, %s)", (zaman, mesaj))
 
         baglanti.commit()
