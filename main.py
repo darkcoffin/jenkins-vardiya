@@ -22,12 +22,12 @@ def telegram_mesaj_gonder(mesaj):
 def veritabani_isleri():
     try:
         # Lokal M4 Uzay Gemimizden Docker'daki veritabanına bağlanıyoruz
-        db_host = "localhost.docker.internal"
+        db_host = "host.docker.internal"
 
         print(f"Baglanti deneniyor: {db_host}...")
 
         baglanti = psycopg2.connect(
-            host="localhost.docker.internal",
+            host="host.docker.internal",
             database="postgres",
             user="postgres",
             password="gizlisifre",
