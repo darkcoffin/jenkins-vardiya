@@ -48,7 +48,7 @@ def ana_sayfa():
         </style>
     </head>
     <body>
-        <h1>🚀 M4 Uzay Gemisi: DevOps Kontrol Paneli</h1>
+        <h1>🚀 M4 Uzay Gemisi: DevOps Kontrol Paneli V2.0</h1>
         <table>
             <tr>
                 <th>ID</th>
