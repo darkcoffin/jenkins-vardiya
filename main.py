@@ -27,7 +27,7 @@ def veritabani_isleri():
         print(f"Baglanti deneniyor: {db_host}...")
 
         baglanti = psycopg2.connect(
-            host=db_host,
+            host="localhost.docker.internal",
             database="postgres",
             user="postgres",
             password="gizlisifre",
