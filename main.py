@@ -22,7 +22,7 @@ def telegram_mesaj_gonder(mesaj):
 def veritabani_isleri():
     try:
         # Lokal M4 Uzay Gemimizden Docker'daki veritabanına bağlanıyoruz
-        db_host = "localhost"
+        db_host = "localhost.docker.internal"
 
         print(f"Baglanti deneniyor: {db_host}...")
 
