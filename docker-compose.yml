@@ -1,0 +1,34 @@
+version: '3.8'
+
+services:
+  veritabani:
+    image: postgres:16
+    container_name: orkestra-db
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: gizlisifre
+      POSTGRES_DB: postgres
+    ports:
+      - "5432:5432"
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+
+  adminer:
+    image: adminer
+    container_name: orkestra-adminer
+    ports:
+      - "8080:8080"
+    depends_on:
+      - veritabani
+
+  web-vitrin:
+    build: .
+    container_name: orkestra-web
+    ports:
+      - "5005:5001"
+    depends_on:
+      - veritabani
+    restart: always
+
+volumes:
+  pgdata:

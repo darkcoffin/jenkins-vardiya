@@ -7,7 +7,7 @@ def verileri_getir():
     try:
         # Docker'daki veritabanımıza bağlanıp verileri çekiyoruz
         baglanti = psycopg2.connect(
-            host="host.docker.internal",
+            host="veritabani",
             database="postgres",
             user="postgres",
             password="gizlisifre",
